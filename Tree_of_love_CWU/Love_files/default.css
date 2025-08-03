@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffc0cb;
+	font-size: 20px;
+	font-family: '微软雅黑', '宋体', sans-serif;
+	color: #000000;
+	overflow: auto
+}
+
+a {
+	color: #000;
+	font-size: 14px;
+}
+
+#main {
+	width: 100%;
+}
+
+#wrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 680px;
+	margin-top: 10px;
+}
+
+#text {
+	width: 450px; /* Lebar disesuaikan agar teks lebih muat horizontal */
+	/* height: 425px; BARIS INI DIHAPUS agar tinggi otomatis mengikuti konten */
+	left: 60px;
+	top: 80px;
+	position: absolute;
+	padding-right: 10px; /* Tambahkan sedikit padding kanan */
+	overflow-y: auto; /* Aktifkan scrollbar vertikal jika konten melebihi tinggi */
+	max-height: 550px; /* Batasi tinggi maksimal agar tidak terlalu panjang */
+}
+
+#code {
+	display: none;
+	font-size: 15px; /* Ukuran font sedikit dikecilkan agar lebih muat */
+	text-align: left; /* Rata kiri */
+	line-height: 1.5; /* Jarak antar baris untuk keterbacaan yang lebih baik */
+}
+
+#clock-box {
+	position: absolute;
+	left: 60px;
+	top: 550px;
+	font-size: 28px;
+	display: none;
+}
+
+#clock-box a {
+	font-size: 28px;
+	text-decoration: none;
+}
+
+#clock {
+	margin-left: 48px;
+}
+
+#clock .digit {
+	font-size: 64px;
+}
+
+#canvas {
+	margin: 0 auto;
+	width: 1100px;
+	height: 680px;
+}
+
+#error {
+	color: #000000;
+	position: absolute;
+	left: 60px;
+	top: 80px;
+	width: 400px;
+	height: 400px;
+	display: none;
+}

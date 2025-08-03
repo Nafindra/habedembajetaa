@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3D Wave Animation</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title-container">
+            <h1>Poto Poto</h1>
+        </div>
+        <div class="items">
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 1.jpg)"></div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 2.jpg)"></div>
+            <div class="item" tabindex="0" 
+                style="background-image: url(Foto\ 3.jpg)">
+            </div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 4.jpg)"></div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 5.jpg)"></div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 6.jpg)"></div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 7.jpg)"></div>
+            <div class="item" tabindex="0" 
+                style="background-image: url(Foto\ 8.jpg)">
+            </div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 9.jpg)"></div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 10.jpg)"></div>
+            <div class="item" tabindex="0" 
+                style="background-image: url(Foto\ 11.jpg)">
+            </div>
+            <div class="item" tabindex="0"
+                style="background-image: url(Foto\ 12.jpg)"></div>
+        </div>
+
+        <div class="button-container">
+            <button id="continueButton">Lanjut</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const continueButton = document.getElementById('continueButton');
+        if (continueButton) {
+            continueButton.addEventListener('click', () => {
+                console.log("Tombol Lanjut 3D Wave diklik!");
+                window.location.href = '../Tree-Love-2/index.html';
+            });
+        }
+    });
+</script>

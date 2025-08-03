@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday Mba</title>
+</head>
+<body>
+    <div class="background">
+        <video autoplay muted loop class="video">
+            <source src="2.mp4" type="video/mp4" class="v"></source>
+        </video>
+        
+        <div class="login">
+            <div class="login-form">
+                <h1>Login Dulu Mba</h1>
+                <form id="loginForm"> <input type="text" id="username" placeholder="UserName"><br><br> <input type="password" id="password" placeholder="Password"><br><br><br> <button type="submit">Login</button> </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ambil elemen form
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        // Tambahkan event listener untuk submit form
+        loginForm.addEventListener('submit', function(event) {
+            // Mencegah form untuk melakukan submit default (reload halaman)
+            event.preventDefault();
+
+            // Ambil nilai dari input
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            // Logika validasi sederhana (Anda bisa mengubahnya)
+            // Contoh: username "admin" dan password "123"
+            if (username === 'Jetaa' && password === '286') {
+                // Jika login berhasil, arahkan ke halaman dashboard
+                // Sesuaikan path ini dengan lokasi file dashboard Anda
+                window.location.href = 'flowers-for-someone-main/index.html'; 
+                // Atau 'flowers-for-someone-main/flower.html' jika itu halaman utamanya
+            } else {
+                // Jika login gagal, tampilkan pesan error
+                alert('Username atau Password salah! Silakan coba lagi.');
+            }
+        });
+
+        // Menangani tombol Enter pada input username
+        usernameInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Mencegah submit default
+                passwordInput.focus(); // Pindahkan fokus ke input password
+            }
+        });
+
+        // Menangani tombol Enter pada input password
+        passwordInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Mencegah submit default
+                loginForm.submit(); // Kirim form secara programatis
+            }
+        });
+    </script>
+</body>
+</html>

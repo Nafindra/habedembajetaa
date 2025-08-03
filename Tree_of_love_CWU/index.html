@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>A Love Letter</title>
+    <link rel="icon" type="image/x-icon" href="https://i.loli.net/2021/06/03/lFg2V4WUcmkB98G.png">
+    <meta name="language" content="en-US">
+    <meta name="title" content="Student Sun">
+    <meta name="describe" content="It’s not easy to collect all this. Your star is my motivation to keep going. PRs are also welcome!">
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="error">Dear, your browser does not support the content about to be displayed. Please switch to Google Chrome (<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>) or Firefox (<a href="http://firefox.com.cn/download/">Firefox</a>)~</div>
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <span class="say">Hualooo Mbaaa</span><br><br>
+                    <span class="say">Kita Di Itung Itung Udah Berapa Tahun Ya Sekarang Bareng.</span><br>
+                    <span class="say">Tau Kamu Dari MI, Temenan Dari Kelas 10 Ampe Sekarang Lama Juga Ya.</span><br>
+                    <span class="say">Btw, 4 Tahun Bareng Aku Udah Confess Ke Kamu Berapa Kali Ya Wkwkwk.</span><br>
+                    <span class="say">Aku Juga Lupa Si Tapi Confesnya Awal Kenal Banget Ya Wkwkwk.</span><br>
+                    <br>
+                    <span class="say">Tapi Ya Gapapa Katanya Kamu Waktu Itu Gamau Dulu Ya, Atau Gamau Nya Ampe Sekarang?.</span><br>
+                    <span class="say">Ya Tau Si Kamu Gamau Karena Takutnya Di Atur Atur Gitu Ya Kamu Bilang Soalnya Masi Pengen Main Sana Sini Gitu.</span><br>
+                    <span class="say">4 Taun Kita Bareng Terus Ya Masa Iya Si Cwk Ama Cwk Udah Bareng Segitu Lama Ga Ada Rasa Gitu Ya.</span><br>
+                    <span class="say">Ketemu Di SMK Langsung Ngajak Pulang Bareng Padahal Belum Pernah Ketemu Cuma Di MI Doang Wkwkwk.</span><br>
+                    <br>
+                    <span class="say">Naik Kelas 11 Masuk PKL Bareng Juga Ya Sama Sama DI TA Gatau Kebeneran Apa Emang Jodoh Hehe.</span><br>
+                    <span class="say">Pas Udah Lulus Sama Sama Lanjut Kuliah Di Bandung Sekarang Bareng Lagi, Tapi Seneng Si Bisa Bareng Terus Sama Kamu Ampe Sekarang.</span><br>
+                    <br>
+                    <span class="say">Seneng Banget Bisa Kenal Kamu Kalo Kamu Ngga Ngechat Aku Waktu Salsa Keknya Ga Bakalan Bareng Terus Gini Tapi Gatau Ding.</span><br>
+                    <span class="say">Mon Maap Ya Ini Ucapan Agak Nyleneh Kemana Gitu Soalnya Emang Awalnya Buat Ini WKWKWKWK (Maap Juga Ya Kalo Alay Banget Web Nya Nemu Tutornya Kaya Gini Soalnya).</span><br>
+                    <span class="say">Maap Juga Ini Tulisan Banyak Banget Ya Kamu Kan Muwak Kalo Ada Long Text Tapi Baca Ya Ampe AKhir Abis Ini Ga Banyak Kok.</span><br>
+                    <br>
+                    <br>
+                    <span class="say"><span class="space"></span>-Palik-</span>
+                    <br><br>
+                    <button id="continueButton" style="display:none; padding: 10px 20px; font-size: 1.2em; cursor: pointer; background-color: #ff69b4; color: white; border: none; border-radius: 5px;">Lanjut</button>
+                </div>
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var canvas = $('#canvas');
+
+            if (!canvas[0].getContext) {
+                $("#error").show();
+                return false;
+            }
+
+            var width = canvas.width();
+            var height = canvas.height();
+
+            canvas.attr("width", width);
+            canvas.attr("height", height);
+
+            var opts = {
+                seed: {
+                    x: width / 2 - 20,
+                    color: "rgb(190, 26, 37)",
+                    scale: 2
+                },
+                branch: [
+                    [535, 680, 570, 250, 500, 200, 30, 100, [
+                        [540, 500, 455, 417, 340, 400, 13, 100, [
+                            [450, 435, 434, 430, 394, 395, 2, 40]
+                        ]],
+                        [550, 445, 600, 356, 680, 345, 12, 100, [
+                            [578, 400, 648, 409, 661, 426, 3, 80]
+                        ]],
+                        [539, 281, 537, 248, 534, 217, 3, 40],
+                        [546, 397, 413, 247, 328, 244, 9, 80, [
+                            [427, 286, 383, 253, 371, 205, 2, 40],
+                            [498, 345, 435, 315, 395, 330, 4, 60]
+                        ]],
+                        [546, 357, 608, 252, 678, 221, 6, 100, [
+                            [590, 293, 646, 277, 648, 271, 2, 80]
+                        ]]
+                    ]]
+                ],
+                bloom: {
+                    num: 700,
+                    width: 1080,
+                    height: 650,
+                },
+                footer: {
+                    width: 1200,
+                    height: 5,
+                    speed: 10,
+                }
+            }
+
+            var tree = new Tree(canvas[0], width, height, opts);
+            var seed = tree.seed;
+            var foot = tree.footer;
+            var hold = 0; // Nilai ini diubah dari 1 menjadi 0 agar animasi langsung dimulai.
+
+            var seedAnimate = eval(Jscex.compile("async", function () {
+                seed.draw();
+                while (hold) {
+                    $await(Jscex.Async.sleep(10));
+                }
+                while (seed.canScale()) {
+                    seed.scale(0.95);
+                    $await(Jscex.Async.sleep(10));
+                }
+                while (seed.canMove()) {
+                    seed.move(0, 2);
+                    foot.draw();
+                    $await(Jscex.Async.sleep(10));
+                }
+            }));
+
+            var growAnimate = eval(Jscex.compile("async", function () {
+                do {
+                    tree.grow();
+                    $await(Jscex.Async.sleep(10));
+                } while (tree.canGrow());
+            }));
+
+            var flowAnimate = eval(Jscex.compile("async", function () {
+                do {
+                    tree.flower(2);
+                    $await(Jscex.Async.sleep(10));
+                } while (tree.canFlower());
+            }));
+
+            var moveAnimate = eval(Jscex.compile("async", function () {
+                tree.snapshot("p1", 240, 0, 610, 680);
+                while (tree.move("p1", 500, 0)) {
+                    foot.draw();
+                    $await(Jscex.Async.sleep(10));
+                }
+                foot.draw();
+                tree.snapshot("p2", 500, 0, 610, 680);
+
+                canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+                canvas.css("background", "#ffc0cb");
+                $await(Jscex.Async.sleep(300));
+                canvas.css("background", "none");
+            }));
+
+            var jumpAnimate = eval(Jscex.compile("async", function () {
+                var ctx = tree.ctx;
+                while (true) {
+                    tree.ctx.clearRect(0, 0, width, height);
+                    tree.jump();
+                    foot.draw();
+                    $await(Jscex.Async.sleep(25));
+                }
+            }));
+
+            var runAsync = eval(Jscex.compile("async", function () {
+                $await(seedAnimate());
+                $await(growAnimate());
+                $await(flowAnimate());
+                $await(moveAnimate());
+
+                $("#code").show().typewriter({
+    callback: function() {
+        // Ini adalah callback, kode di sini akan dijalankan setelah animasi selesai
+        $("#continueButton").fadeIn(1000);
+
+        // Pindahkan kode on("click") ke dalam sini
+        $("#continueButton").on("click", function() {
+            console.log("Tombol Lanjut diklik!");
+            window.location.href = '../3D_Wave_Animation_CWM/index.html';
+        });
+    },
+    speed: 10
+});
+
+                $await(jumpAnimate());
+            }));
+
+            runAsync().start();
+        })();
+    </script>
+</body>
+</html>

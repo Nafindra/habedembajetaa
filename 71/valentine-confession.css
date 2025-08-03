@@ -1,0 +1,125 @@
+/* Aturan global */
+* {
+    box-sizing: border-box;
+}
+
+/* Font styles for h1 and p, using Quicksand */
+h1,
+p,
+button {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+/* Body defaults */
+body {
+    margin: 0px;
+    background-color: #fce4ec; /* Warna default */
+}
+
+/* Instruction text positioning */
+.instruction {
+    position: absolute;
+    font-size: 1.6rem;
+    color: rgba(255, 0, 0, 0.554);
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Main container for heart and message */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 2s ease-in-out;
+}
+
+/* Heart icon styling and initial animation */
+.heart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: transform 2s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.heart img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Hide the checkbox */
+#messageState {
+    display: none;
+}
+
+/* Message box styling */
+.message {
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 0px 20px;
+    overflow: hidden;
+    color: white;
+    background-color: #f48fb1;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: all 1s ease-in-out;
+}
+
+/* Custom styles for message content from inline styles */
+.message-title {
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    letter-spacing: 1.2px;
+}
+
+.message-content {
+    text-align: justify;
+}
+
+.indent-text {
+    text-indent: 2em; /* Menggantikan &emsp; */
+    display: block;
+}
+
+.sincere .signature {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.sincere .next-message-hint {
+    margin-bottom: 20px;
+}
+
+/* Animation for message opening/closing */
+.message-open {
+    height: 600px; /* Tinggi saat terbuka */
+    padding: 20px;
+}
+
+/* --- Efek Confetti --- */
+.confetti {
+  position: fixed; /* Gunakan fixed agar tidak terpengaruh scroll */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1000;
+}
